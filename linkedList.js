@@ -67,6 +67,23 @@ class LinkedList{
         this.length++
         return this;
     }
+    
+     // delete a node
+    delete(index){
+        while(index<this.length){
+            if(index>0){
+            let prev = this.traverseToIndex(index-1);
+            let nodeToDelete = prev.next;
+            prev.next = nodeToDelete.next;
+            }else{
+                // if it is first node
+                let nodeToDelete = this.head;
+                this.head = nodeToDelete.next;
+            }
+            this.length--;
+            return this;
+        }
+    }
 
 }
 
