@@ -94,5 +94,6 @@ myLinkedList.prepend(1);
 myLinkedList.insert(2,4);
 myLinkedList.insert(4,20);
 myLinkedList.insert(10,26);
+myLinkedList.delete(2);
 myLinkedList.display();
 console.log(myLinkedList.display());
