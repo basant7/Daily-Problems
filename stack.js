@@ -58,6 +58,7 @@ myStack.push(4);
 myStack.push(6);
 myStack.push(8);
 myStack.push(10);
+mystack.push(12);
 console.log(myStack);
 myStack.pop();
 console.log(myStack);
