@@ -49,6 +49,17 @@ class Stack{
         this.length--;
         return this;
     }
+    
+    // to display the linked list in form of array
+    display(){
+        let array = [];
+        let currentNode = this.top;
+        while(currentNode != null){
+            array.push(currentNode.value);
+            currentNode = currentNode.next;
+        }
+        return array;
+    }
 
 }
 
@@ -59,7 +70,7 @@ myStack.push(6);
 myStack.push(8);
 myStack.push(10);
 mystack.push(12);
-console.log(myStack);
+console.log(myStack.display());
 myStack.pop();
-console.log(myStack);
+console.log(myStack.display());
 console.log(myStack.peek());
