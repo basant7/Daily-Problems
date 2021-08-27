@@ -42,7 +42,7 @@ class Stack{
             return null;
         }
         this.top = this.top.next;
-        this.length++;
+        this.length--;
         return this;
     }
 
