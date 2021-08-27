@@ -84,6 +84,26 @@ class LinkedList{
             return this;
         }
     }
+    
+    // to reverse a linked list
+    reverse(){
+        // if there is only one node
+        if (this.head.next == null){
+            return this.head;
+        }
+        let first = this.head;
+        this.tail = this.head;
+        let second = first.next;
+        while(second != null){
+            let third = second.next;
+            second.next = first;
+            first = second;
+            second = third;
+        }
+        this.head.next = null;
+        this.head = first;
+        return this;
+    }
 
 }
 
@@ -95,5 +115,6 @@ myLinkedList.insert(2,4);
 myLinkedList.insert(4,20);
 myLinkedList.insert(10,26);
 myLinkedList.delete(2);
+myLinkedList.reverse();
 myLinkedList.display();
 console.log(myLinkedList.display());
