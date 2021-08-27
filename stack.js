@@ -41,7 +41,8 @@ class Stack{
         if(this.top == null){
             return null;
         }
-        if(this.top = this.bottom){
+        // if the stack becomes empty then make bottom empty too or it will show the last value pointing
+        if(this.top == this.bottom){
             this.bottom = null;
         }
         this.top = this.top.next;
