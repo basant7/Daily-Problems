@@ -47,6 +47,31 @@ class BinaryTree{
             }
         }
     }
+    
+    // to find an element
+    lookup(value){
+        // if the root is null return false
+        if(this.root == null){
+            return false;
+        }
+        let currentNode = this.root;
+        // if element is present
+        while(currentNode){
+            // if(value == currentNode.value){
+            //     return value;
+            // }
+            if(value < currentNode.value){
+                currentNode = currentNode.left;
+            }
+            if(value > currentNode.value){
+                currentNode = currentNode.right;
+            }
+            if(currentNode.value == value){
+                return currentNode;
+            }
+        }
+        return false;
+    }
 }
 
 const Tree = new BinaryTree();
@@ -57,6 +82,7 @@ Tree.insert(20);
 Tree.insert(170);
 Tree.insert(15);
 Tree.insert(1);
+console.log(Tree.lookup(1));
 console.log(JSON.stringify(traverse(Tree.root)))
 
 // just to show tree structure in console
